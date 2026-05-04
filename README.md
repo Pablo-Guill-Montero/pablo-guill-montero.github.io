@@ -9,6 +9,7 @@ Portfolio template built with Astro. All your content lives in simple JSON files
 | **Content management** | Everything configured via JSON files — no CMS, no code changes needed |
 | **Project cards**      | Auto-fetches cover images from GitHub READMEs at build time           |
 | **Contact form**       | Web3Forms — no backend, just one API key                              |
+| **Printable Resume**   | The content in this site is printable as a resume with, ctrl + p      |
 | **Hosting**            | 100% static output, deploys to any CDN or VPS for free                |
 | **SEO & PWA**          | OG tags, web manifest, all favicon sizes, works offline               |
 | **Accessibility**      | Keyboard nav, ARIA labels, skip link, reduced-motion support          |
