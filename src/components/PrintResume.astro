@@ -35,7 +35,7 @@ const inProgressCerts = certsData.filter(c => c.status !== 'Earned');
   <section class="resume-section">
     <h2 class="section-title">Technical Skills</h2>
     <div class="skills-grid">
-      {skillsData.map(category => (
+      {skillsData.categories.map(category => (
         <div class="skill-row">
           <span class="skill-category">{category.title}</span>
           <span class="skill-items">{category.skills.map(s => s.name).join(' · ')}</span>
@@ -149,13 +149,14 @@ const inProgressCerts = certsData.filter(c => c.status !== 'Earned');
     margin-bottom: 9px;
   }
 
-  .section-title {
+  h2.section-title, .section-title {
     font-size: 10pt;
     font-weight: 800;
     letter-spacing: 0.08em;
     text-transform: uppercase;
     color: #000 !important;
-    border-bottom: 2px solid #000;
+    text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.8) !important;
+    border-bottom: 2.5px solid #000 !important;
     padding-bottom: 2px;
     margin: 0 0 5px 0;
   }
