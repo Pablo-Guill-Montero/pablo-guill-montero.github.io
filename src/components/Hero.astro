@@ -1,7 +1,8 @@
 ---
 import personalData from '../data/personal.json';
-import projectsData from '../data/projects.json';
+import projectsFile from '../data/projects.json';
 import { augmentProjectsWithImages, type ProjectEntry } from '../lib/fetchGitHub';
+const projectsData = projectsFile.items;
 import { getSocialLinks } from '../lib/socialLinks';
 
 const heroSocialLinks = getSocialLinks(
@@ -11,12 +12,46 @@ const heroSocialLinks = getSocialLinks(
 
 import { icons } from '../lib/icons';
 import { withBase } from '../lib/assetPath';
+import { existsSync, readdirSync } from 'node:fs';
+import { extname, join } from 'node:path';
 
-const augmented = await augmentProjectsWithImages(projectsData as ProjectEntry[]);
-// Only projects with a GitHub-fetched preview image appear in the hero slider.
-const featuredProjects = augmented.filter((p) => p.featuredImage);
+const augmented = await augmentProjectsWithImages(projectsData as unknown as ProjectEntry[]);
+// Use GitHub-fetched featuredImage when available; fall back to sliderImage from JSON.
+// This keeps the slider populated even when GITHUB_USER is not configured.
+const featuredProjects = augmented
+  .map((p) => ({ ...p, featuredImage: p.featuredImage ?? p.sliderImage }))
+  .filter((p) => p.featuredImage)
+  .sort((a, b) => (a.sliderOrder ?? 999) - (b.sliderOrder ?? 999));
 // Split "Frontend & Backend" so the "&" can be styled with a different colour in the template.
 const heroParts = personalData.heroRole.split(' & ');
+
+// CV auto-discovery: check personalData.cv first (external URL or local path),
+// then fall back to scanning public/cv/ for any PDF/DOC/DOCX file.
+const cvValue = (personalData.cv ?? '').trim();
+const isExternalCv = /^https?:\/\//i.test(cvValue);
+const hasLocalCv =
+  cvValue.startsWith('/') &&
+  existsSync(join(process.cwd(), 'public', cvValue.replace(/^\//, '')));
+
+let discoveredCv = '';
+const cvPublicDir = join(process.cwd(), 'public', 'cv');
+if (!isExternalCv && !hasLocalCv && existsSync(cvPublicDir)) {
+  const allowedCvExt = new Set(['.pdf', '.doc', '.docx']);
+  const candidates = readdirSync(cvPublicDir)
+    .filter((f) => allowedCvExt.has(extname(f).toLowerCase()))
+    .sort((a, b) => a.localeCompare(b, undefined, { numeric: true, sensitivity: 'base' }));
+  if (candidates.length > 0) discoveredCv = `/cv/${candidates[0]}`;
+}
+
+const cvHref = isExternalCv ? cvValue : hasLocalCv ? cvValue : discoveredCv;
+const hasCv = Boolean(cvHref);
+
+const photoValue = (personalData.photo ?? '').trim();
+const isExternalPhoto = /^https?:\/\//i.test(photoValue);
+const hasPortrait =
+  photoValue !== '' &&
+  (isExternalPhoto ||
+    existsSync(join(process.cwd(), 'public', photoValue.replace(/^\//, ''))));
 ---
 
 <section id="home" class="relative min-h-screen overflow-hidden flex items-center">
@@ -83,9 +118,9 @@ const heroParts = personalData.heroRole.split(' & ');
 
         <div class="flex flex-col sm:flex-row gap-4 reveal" style="transition-delay: 0.3s;">
           <a href="#contact" class="btn-primary text-center">Get In Touch</a>
-          {personalData.cv ? (
+          {hasCv ? (
             <a
-              href={personalData.cv}
+              href={cvHref}
               target="_blank"
               rel="noopener noreferrer"
               class="btn-secondary text-center">Download CV</a>
@@ -109,20 +144,22 @@ const heroParts = personalData.heroRole.split(' & ');
             ))
           }
         </div>
-        <div
-          class="portrait-peek-wrapper reveal"
-          aria-hidden="true"
-          style="transition-delay: 0.65s;"
-        >
-          <img
-            src={withBase(personalData.photo)}
-            alt={personalData.photoAlt ?? ''}
-            class="portrait-peek-img"
-            loading="lazy"
-            width="280"
-            height="350"
-          />
-        </div>
+        {hasPortrait && (
+          <div
+            class="portrait-peek-wrapper reveal"
+            aria-hidden="true"
+            style="transition-delay: 0.65s;"
+          >
+            <img
+              src={withBase(personalData.photo)}
+              alt={personalData.photoAlt ?? ''}
+              class="portrait-peek-img"
+              loading="lazy"
+              width="280"
+              height="350"
+            />
+          </div>
+        )}
       </div>
 
       <div
@@ -1070,7 +1107,12 @@ const heroParts = personalData.heroRole.split(' & ');
     slide.addEventListener('click', (e: MouseEvent) => {
       if ((e.target as HTMLElement).closest('button')) return;
       const idx = (slide as HTMLElement).dataset.projectIndex;
-      document.querySelector<HTMLElement>(`.project-card[data-index="${idx}"]`)?.click();
+      // Grid layout: click opens the project modal
+      const gridCard = document.querySelector<HTMLElement>(`.project-card[data-index="${idx}"]`);
+      if (gridCard) { gridCard.click(); return; }
+      // Showcase layout: scroll to the matching feature card
+      document.querySelector<HTMLElement>(`.project-feature[data-index="${idx}"]`)
+        ?.scrollIntoView({ behavior: 'smooth', block: 'center' });
     });
   });
 
