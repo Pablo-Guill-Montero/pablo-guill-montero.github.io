@@ -23,20 +23,16 @@ const { section, categories } = skillsData;
               <div class="skill-item">
                 <div class="icon-tile">
                   <img
-                    src={withBase(skill.logo)}
+                    src={withBase(
+                      skill.icon.includes(':')
+                        ? `/images/icons/${skill.icon.replace(':', '/')}.svg`
+                        : skill.icon
+                    )}
                     alt={skill.name}
                     class="skill-icon"
                     loading="lazy"
                     width="36"
                     height="36"
-                    onerror="this.style.display='none';this.nextElementSibling?.classList.remove('skill-icon-hidden')"
-                  />
-                  <iconify-icon
-                    icon={skill.iconify ?? 'mdi:star-four-points-circle-outline'}
-                    class="skill-icon skill-icon-hidden"
-                    width="32"
-                    height="32"
-                    aria-hidden="true"
                   />
                 </div>
                 <span class="skill-name">{skill.name}</span>
@@ -110,7 +106,6 @@ const { section, categories } = skillsData;
     height: 34px;
     object-fit: contain;
   }
-  .skill-icon-hidden { display: none; }
 
   .skill-name {
     font-size: 0.65rem;
