@@ -24,12 +24,6 @@ async function downloadBinary(url, dest) {
   writeFileSync(dest, Buffer.from(await res.arrayBuffer()));
 }
 
-// devicon CDN paths nest SVGs under a folder named after the base icon (no variant suffix).
-// e.g. "typescript-original.svg" lives under "typescript/typescript-original.svg".
-function deviconFolder(filename) {
-  return filename.replace(/\.svg$/, '').replace(/-(original|plain|line)(-wordmark)?$/, '');
-}
-
 // Build-time SSRF guard: only fetch images from known-good GitHub domains.
 const ALLOWED_IMAGE_HOSTS = new Set([
   'raw.githubusercontent.com',
@@ -52,8 +46,6 @@ function isAllowedImageUrl(url) {
 // Returns null for paths not covered by a known CDN mapping (caller logs a warning and skips).
 function cdnUrlFor(localPath) {
   const file = localPath.replace(/^\/images\/icons\/[^/]+\//, '');
-  if (localPath.startsWith('/images/icons/devicons/'))
-    return `https://cdn.jsdelivr.net/gh/devicons/devicon/icons/${deviconFolder(file)}/${file}`;
   if (localPath.startsWith('/images/icons/materialdesign/'))
     return `https://cdn.jsdelivr.net/gh/Templarian/MaterialDesign/svg/${file}`;
   if (localPath.startsWith('/images/icons/dashboard-icons/'))
@@ -61,26 +53,63 @@ function cdnUrlFor(localPath) {
   return null;
 }
 
-async function ensureIcons() {
-  const dataDir = join(ROOT, 'src', 'data');
-  const referenced = new Set();
-
-  // Scan JSON data files for any "logo" or "colorIcon" paths under /images/icons/.
-  // Only those paths need to be present in public/ at build time.
-  for (const filename of ['skills.json', 'projects.json']) {
-    const path = join(dataDir, filename);
-    if (!existsSync(path)) continue;
-    const text = readFileSync(path, 'utf8');
-    for (const [, p] of text.matchAll(/"(?:logo|colorIcon)":\s*"(\/images\/icons\/[^"]+)"/g))
-      referenced.add(p);
-  }
-
-  const missing = [...referenced].filter((p) => !existsSync(join(PUBLIC, p)));
+// Downloads a set of Iconify identifiers (e.g. "devicon:react") that are missing from disk.
+// Identifiers are resolved to SVGs via the Iconify API. Existing files are never overwritten.
+async function downloadIconifyIdentifiers(identifiers, label) {
+  const missing = [...identifiers].filter((id) => {
+    const [prefix, name] = id.split(':');
+    return !existsSync(join(PUBLIC, 'images', 'icons', prefix, `${name}.svg`));
+  });
   if (missing.length === 0) return;
 
-  console.log(`Downloading ${missing.length} missing icon(s)...`);
+  console.log(`Downloading ${missing.length} missing ${label} icon(s) from Iconify...`);
   const results = await Promise.allSettled(
-    missing.map((p) => {
+    missing.map((id) => {
+      const [prefix, name] = id.split(':');
+      const dest = join(PUBLIC, 'images', 'icons', prefix, `${name}.svg`);
+      return downloadBinary(`https://api.iconify.design/${prefix}/${name}.svg`, dest);
+    })
+  );
+  for (const r of results) if (r.status === 'rejected') console.warn(`  ! ${r.reason.message}`);
+}
+
+// Downloads skill icons defined as Iconify identifiers (e.g. "simple-icons:figma").
+// Local paths (starting with "/") are user-managed and skipped.
+async function ensureSkillIcons() {
+  const skillsPath = join(ROOT, 'src', 'data', 'skills.json');
+  if (!existsSync(skillsPath)) return;
+
+  const text = readFileSync(skillsPath, 'utf8');
+  const identifiers = new Set();
+  for (const [, v] of text.matchAll(/"icon":\s*"([^"]+)"/g))
+    if (v.includes(':')) identifiers.add(v);
+
+  await downloadIconifyIdentifiers(identifiers, 'skill');
+}
+
+// Downloads project colorIcons. Supports both Iconify identifiers (e.g. "devicon:react")
+// and legacy local paths (e.g. "/images/icons/materialdesign/github.svg") in the same field.
+async function ensureProjectColorIcons() {
+  const projectsPath = join(ROOT, 'src', 'data', 'projects.json');
+  if (!existsSync(projectsPath)) return;
+
+  const text = readFileSync(projectsPath, 'utf8');
+  const identifiers = new Set();
+  const localPaths = new Set();
+
+  for (const [, v] of text.matchAll(/"colorIcon":\s*"([^"]+)"/g)) {
+    if (v.includes(':')) identifiers.add(v);
+    else if (v.startsWith('/')) localPaths.add(v);
+  }
+
+  await downloadIconifyIdentifiers(identifiers, 'project color');
+
+  const missingLocal = [...localPaths].filter((p) => !existsSync(join(PUBLIC, p)));
+  if (missingLocal.length === 0) return;
+
+  console.log(`Downloading ${missingLocal.length} missing project icon(s)...`);
+  const results = await Promise.allSettled(
+    missingLocal.map((p) => {
       const url = cdnUrlFor(p);
       if (!url) {
         console.warn(`  ! no CDN mapping for ${p} — skipping`);
@@ -375,7 +404,8 @@ async function ensureProjectImages() {
 async function main() {
   await ensureFonts();
   await ensureProjectImages();
-  await ensureIcons();
+  await ensureSkillIcons();
+  await ensureProjectColorIcons();
   console.log('Assets ready.');
 }
 
