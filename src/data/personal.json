@@ -1,5 +1,8 @@
 {
   "name": "Your Name Here",
+  "url": "https://www.example.com",
+  "addressLocality": "City",
+  "addressRegion": "ST",
   "title": "Creative Professional",
   "photo": "/images/personal/portrait.png",
   "photoAlt": "Portrait photo",
