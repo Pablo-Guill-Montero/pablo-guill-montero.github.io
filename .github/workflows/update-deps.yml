@@ -1,4 +1,4 @@
-name: Update Dependencies
+name: 1. Update Dependencies
 
 # Manual trigger — run from Actions → Run workflow in GitHub.
 # Updates all pinned packages to latest, audits for CVEs, pins the three.js
@@ -25,6 +25,9 @@ concurrency:
   group: update-deps
   cancel-in-progress: true
 
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
 jobs:
   update-deps:
     runs-on: ubuntu-latest
@@ -37,7 +40,6 @@ jobs:
           node-version: 24
 
       - uses: pnpm/action-setup@v4
-        # Reads the pnpm version from the packageManager field in package.json.
 
       - name: Migrate @tailwindcss/vite → @tailwindcss/postcss
         # Idempotent — no-op once the project has been migrated.
