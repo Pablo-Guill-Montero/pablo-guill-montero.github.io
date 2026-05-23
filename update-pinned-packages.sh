@@ -35,7 +35,7 @@ via a throwaway Docker container. Also pins the three.js CDN version in
 scripts/download-assets.mjs.
 
 Direct dependencies updated:
-  astro  tailwindcss  @tailwindcss/postcss  @astrojs/check
+  astro  tailwindcss  @tailwindcss/vite  @astrojs/check
   typescript  eslint  @typescript-eslint/parser
   eslint-plugin-astro  @types/node
 
@@ -85,7 +85,7 @@ if [ "$DISCARD" -eq 1 ] && [ "$LOCK_ONLY" -eq 1 ]; then
 fi
 
 # ── All direct dependencies ───────────────────────────────────────────────────
-PKGS="astro tailwindcss @tailwindcss/postcss @astrojs/check typescript eslint @typescript-eslint/parser eslint-plugin-astro @types/node"
+PKGS="astro tailwindcss @tailwindcss/vite @astrojs/check typescript eslint @typescript-eslint/parser eslint-plugin-astro @types/node"
 
 # ── Build the pnpm command string ─────────────────────────────────────────────
 if [ "$LOCK_ONLY" -eq 1 ]; then
