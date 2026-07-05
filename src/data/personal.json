@@ -15,6 +15,7 @@
   "gitlab": "",
   "facebook": "",
   "youtube": "@PabloGuillMontero",
+  "itchio": "teamempanadilla",
   "discogs": "",
   "codepen": "",
   "jsfiddle": "",
@@ -33,7 +34,7 @@
   "volunteer": "",
   "portfolioUrl": "",
   "heroRole": "Game Designer, Game Developer & Multimedia Engineer",
-  "heroSocialLinks": ["github", "linkedin", "youtube"],
+  "heroSocialLinks": ["github", "linkedin", "itchio", "youtube"],
   "bio": "Me gusta desarrollar videojuegos divertidos y componer música que transmita distintas emociones. Me considero un perfil flexible ya que he trabajado muchas ramas de la multimedia.",
-  "aboutLong": "Soy un Ingeniero Multimedia especializado en Game Design con un perfil híbrido, sólido y altamente versátil. Mi gran fortaleza técnica radica en el desarrollo y la programación: aunque picar código no sea mi mayor pasión, es la herramienta que más utilizo en mi día a día y en la que poseo mayor destreza, siendo especialmente meticuloso al cazar fallos con el debugger. Mi verdadero valor es que soy un perfil todoterreno centrado en cerrar proyectos. Gracias a mi formación multidisciplinar, puedo diseñar las mecánicas de un juego, modelar assets 3D en Blender, programar sistemas de partículas o dibujar el arte y el HUD si la situación lo requiere. Además, aporto una capa atmosférica única encargándome del sound design y componiendo la música original de mis obras. No me limito a una sola tarea; actúo como el puente técnico y artístico necesario para asegurar que una idea se convierta en un juego pulido, funcional y jugable de principio a fin."
+  "aboutLong": "Soy un Ingeniero Multimedia especializado en Game Design con un perfil híbrido, sólido y altamente versátil. Mi gran fortaleza técnica radica en el desarrollo y la programación: aunque picar código no sea mi mayor pasión, es la herramienta que más utilizo en mi día a día y en la que poseo mayor destreza, siendo especialmente meticuloso al cazar fallos con el debugger. Mi verdadero valor es que soy un perfil todoterreno centrado en cerrar proyectos. Gracias a mi formación multidisciplinar, puedo diseñar las mecánicas de un juego, modelar assets 3D en Blender, programar sistemas de partículas o dibujar el arte y el HUD si la situación lo requiere. Además, aporto una capa atmosférica única encargándome del sound design y componiendo la música original de mis obras con FMOD, Wwise y FLStudio. No me limito a una sola tarea; actúo como el puente técnico y artístico necesario para asegurar que una idea se convierta en un juego pulido, funcional y jugable de principio a fin."
 }

@@ -1,64 +1,42 @@
 {
   "section": {
-    "eyebrow": "What I work with",
-    "heading": "Technical Arsenal"
+    "eyebrow": "Mi Arsenal Técnico",
+    "heading": "Herramientas de Trabajo"
   },
   "categories": [
     {
-      "title": "Design & Illustration",
+      "title": "Desarrollo y Motores",
       "skills": [
-        { "name": "Figma",       "icon": "simple-icons:figma" },
-        { "name": "Photoshop",   "icon": "simple-icons:adobephotoshop" },
-        { "name": "Illustrator", "icon": "simple-icons:adobeillustrator" },
-        { "name": "Blender",     "icon": "simple-icons:blender" },
-        { "name": "Sketch",      "icon": "simple-icons:sketch" }
+        { "name": "Unity", "icon": "devicon:unity" },
+        { "name": "Unreal Engine", "icon": "simple-icons:unrealengine" },
+        { "name": "VS Code", "icon": "devicon:vscode" },
+        { "name": "GitHub", "icon": "devicon:github" }
       ]
     },
     {
-      "title": "Web & Frontend",
+      "title": "Audio y Edición",
       "skills": [
-        { "name": "HTML5",      "icon": "simple-icons:html5" },
-        { "name": "CSS3",       "icon": "simple-icons:css3" },
-        { "name": "JavaScript", "icon": "simple-icons:javascript" },
-        { "name": "TypeScript", "icon": "simple-icons:typescript" },
-        { "name": "React",      "icon": "simple-icons:react" },
-        { "name": "Bootstrap",  "icon": "simple-icons:bootstrap" }
+        { "name": "FL Studio", "icon": "simple-icons:flstudio" },
+        { "name": "FMOD", "icon": "/images/icons/custom/fmod.png" },
+        { "name": "Wwise", "icon": "/images/icons/custom/wwise.png" },
+        { "name": "Audacity", "icon": "simple-icons:audacity" }
       ]
     },
     {
-      "title": "Motion, 3D & Video",
+      "title": "Arte 2D, 3D y HUD",
       "skills": [
-        { "name": "Three.js",     "icon": "simple-icons:threedotjs" },
-        { "name": "After Effects","icon": "simple-icons:adobeaftereffects" },
-        { "name": "Premiere Pro", "icon": "simple-icons:adobepremierepro" },
-        { "name": "Photoshop",    "icon": "simple-icons:adobephotoshop" }
+        { "name": "Blender", "icon": "devicon:blender" },
+        { "name": "Krita", "icon": "simple-icons:krita" },
+        { "name": "GIMP", "icon": "devicon:gimp" },
+        { "name": "Affinity", "icon": "simple-icons:affinitydesigner" },
+        { "name": "Canva", "icon": "simple-icons:canva" }
       ]
     },
     {
-      "title": "Platforms & Publishing",
+      "title": "Gestión y Producción",
       "skills": [
-        { "name": "WordPress", "icon": "simple-icons:wordpress" },
-        { "name": "Drupal",    "icon": "simple-icons:drupal" },
-        { "name": "Hugo",      "icon": "simple-icons:hugo" },
-        { "name": "AWS",       "icon": "simple-icons:amazonaws" }
-      ]
-    },
-    {
-      "title": "Dev & Workflow Tools",
-      "skills": [
-        { "name": "Git",      "icon": "simple-icons:git" },
-        { "name": "GitHub",   "icon": "simple-icons:github" },
-        { "name": "Bash",     "icon": "simple-icons:gnubash" },
-        { "name": "Markdown", "icon": "simple-icons:markdown" }
-      ]
-    },
-    {
-      "title": "Data & Infrastructure",
-      "skills": [
-        { "name": "SQLite",     "icon": "simple-icons:sqlite" },
-        { "name": "Nginx",      "icon": "simple-icons:nginx" },
-        { "name": "Docker",     "icon": "simple-icons:docker" },
-        { "name": "Prometheus", "icon": "simple-icons:prometheus" }
+        { "name": "Asana", "icon": "simple-icons:asana" },
+        { "name": "Clockify", "icon": "simple-icons:clockify" }
       ]
     }
   ]

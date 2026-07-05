@@ -1,114 +1,103 @@
 {
-  "title": "Your Name Here | Creative Portfolio",
-  "description": "Portfolio of a designer, developer, and creator. Browse work spanning web, visual design, 3D, video, and more — then reach out.",
-  "ogSiteName": "Portfolio",
-  "shortName": "FOLIO",
-  "tagline": "Designing experiences · Building products · Telling stories",
+  "title": "Pablo Guill Montero | Game Designer & Multimedia Engineer",
+  "description": "Portfolio profesional de Pablo Guill Montero. Exploración de proyectos de desarrollo de videojuegos, diseño de niveles, modelado 3D en Blender, sound design y programación.",
+  "ogSiteName": "Pablo Guill Montero Portfolio",
+  "shortName": "PABLO",
+  "tagline": "Diseñando mecánicas · Conectando arte y código · Creando experiencias",
   "themeStorageKey": "portfolio-theme",
-  "web3formsKey": "YOUR_WEB3FORMS_KEY_HERE",
+  "web3formsKey": "1a271e24-14f8-4007-a3fe-87fe7ee0a443",
   "footerAttribution": {
     "builder": "Built with this open-source template",
-    "builderUrl": "https://github.com/your-github-handle",
-    "host": "Hosted on your platform of choice",
-    "hostUrl": "https://yourdomain.com"
+    "builderUrl": "https://github.com/Pablo-Guill-Montero",
+    "host": "Hosted on GitHub Pages",
+    "hostUrl": "https://pablo-guill-montero.github.io/"
   },
   "retroTvCount": 21,
   "seoKeywords": [
-    "Creative Portfolio",
-    "Web Designer",
-    "Visual Artist",
-    "UI/UX Design",
-    "Front-End Developer",
-    "3D Artist",
-    "Motion Graphics",
-    "Brand Identity",
-    "Freelance Designer",
-    "Video Editor",
-    "Photography",
-    "Illustration",
-    "Digital Art",
-    "Graphic Design",
-    "Interactive Design",
-    "Product Design",
-    "Creative Direction",
-    "Art Direction",
-    "Full-Stack Developer",
-    "Animator",
-    "Typographer",
-    "Storyteller",
-    "Open to Work",
-    "Available for Projects",
-    "Design Systems",
-    "Visual Storytelling"
+    "Game Designer",
+    "Multimedia Engineer",
+    "Ingeniero Multimedia",
+    "Diseño de Videojuegos",
+    "Game Developer",
+    "Desarrollo de Videojuegos",
+    "Blender 3D",
+    "Sound Design",
+    "Diseño de Sonido",
+    "Level Design",
+    "Diseño de Niveles",
+    "Arte Multimedia",
+    "Programación de Videojuegos",
+    "Videojuegos Indie",
+    "HUD Design"
   ],
   "navExternal": [
     {
-      "label": "Blog",
-      "desc": "Writing on design, process, and what I'm learning",
-      "personalKey": "blog",
-      "urlTemplate": "{value}"
-    },
-    {
       "label": "GitHub",
-      "desc": "Open-source work and side experiments",
+      "desc": "Código de proyectos y experimentos",
       "personalKey": "github",
       "urlTemplate": "https://github.com/{value}"
     },
     {
       "label": "LinkedIn",
-      "desc": "Professional profile and recommendations",
+      "desc": "Perfil profesional y contacto",
       "personalKey": "linkedin",
       "urlTemplate": "https://linkedin.com/in/{value}"
     },
     {
-      "label": "Email",
-      "desc": "Best way to reach me for project inquiries",
-      "personalKey": "email",
-      "urlTemplate": "mailto:{value}"
+      "label": "Itch.io",
+      "desc": "Videojuegos y jams",
+      "personalKey": "itchio",
+      "urlTemplate": "https://{value}.itch.io/"
     },
     {
-      "label": "Phone",
-      "desc": "Available for calls by appointment",
-      "personalKey": "phone",
-      "urlTemplate": "tel:{value}"
+      "label": "YouTube",
+      "desc": "Música, sonido y arte",
+      "personalKey": "youtube",
+      "urlTemplate": "https://youtube.com/{value}"
+    },
+    {
+      "label": "Email",
+      "desc": "Contacto directo para proyectos",
+      "personalKey": "email",
+      "urlTemplate": "mailto:{value}"
     }
   ],
   "serviceSites": [
     {
-      "badge": "Client Work",
-      "badgeColor": "#6366f1",
-      "cardAccent": "#6366f1",
-      "glowColor": "rgba(99, 102, 241, 0.12)",
-      "iconBg": "rgba(99, 102, 241, 0.1)",
-      "iconBorder": "rgba(99, 102, 241, 0.18)",
+      "badge": "Proyecto Oculus Quest 2 · Solo",
+      "badgeColor": "#a855f7",
+      "cardAccent": "#a855f7",
+      "glowColor": "rgba(168, 85, 247, 0.15)",
+      "iconBg": "rgba(168, 85, 247, 0.1)",
+      "iconBorder": "rgba(168, 85, 247, 0.2)",
       "iconType": "web",
-      "name": "YourStudio.co",
-      "url": "https://yourstudio.co",
-      "description": "A dedicated space for client work — branding, web builds, campaigns, and everything in between. Full-service creative from concept through delivery, built on clear communication and no surprises.",
+      "name": "VR BoxSlayer",
+      "url": "https://github.com/Pablo-Guill-Montero/UE-BOXSLAYER",
+      "description": "Experiencia inmersiva de realidad virtual desarrollada en Unreal Engine 5 e inspirada en las mecánicas rítmicas de Beat Saber. Un despliegue técnico e individual donde asumí el rol completo de programador, modelador y compositor.",
       "features": [
-        "Brand Identity & Visual Systems",
-        "Web Design & Development",
-        "Campaign Creative & Direction"
+        "Programación de toda la lógica de juego mediante Blueprints",
+        "Modelado 3D completo de todos los assets y composición del escenario",
+        "Composición musical original y diseño de sonido espacializado"
       ],
-      "ctaText": "View Studio Work"
+      "ctaText": "Ver Código en GitHub"
     },
     {
-      "badge": "Side Project",
-      "badgeColor": "#10b981",
-      "cardAccent": "#10b981",
-      "glowColor": "rgba(16, 185, 129, 0.15)",
-      "iconBg": "rgba(16, 185, 129, 0.1)",
-      "iconBorder": "rgba(16, 185, 129, 0.2)",
+      "badge": "Ganador de Premios · Team Empanadilla",
+      "badgeColor": "#ff4f5e",
+      "cardAccent": "#ff4f5e",
+      "glowColor": "rgba(255, 79, 94, 0.15)",
+      "iconBg": "rgba(255, 79, 94, 0.1)",
+      "iconBorder": "rgba(255, 79, 94, 0.2)",
       "iconType": "server",
-      "name": "YourProject.io",
-      "url": "https://yourproject.io",
-      "description": "A personal project built to scratch an itch — self-hosted, self-managed, and entirely my own problem to maintain. Independent, opinionated, and shipped without a committee.",
+      "name": "Dino bonker",
+      "url": "https://teamempanadilla.itch.io/dinobonker",
+      "description": "Videojuego retro tipo Donkey Kong desarrollado íntegramente en ensamblador para la Game Boy original durante un reto de desarrollo de un mes. Un auténtico tour de force de optimización de hardware clásico.",
       "features": [
-        "Self-Hosted & Fully Independent",
-        "Iterating in Public",
-        "Built for One Person: Me"
+        "Desarrollo de físicas de juego, sistema de colisiones y mecánicas de lianas",
+        "Diseño de niveles (Level Design) y creación de parte del arte 2D",
+        "Composición e integración de la banda sonora con limitaciones de hardware"
       ],
-      "ctaText": "Check It Out"
+      "ctaText": "Jugar en Itch.io"
     }
   ]
 }
