@@ -64,40 +64,22 @@
   ],
   "serviceSites": [
     {
-      "badge": "Proyecto Oculus Quest 2 · Solo",
-      "badgeColor": "#a855f7",
-      "cardAccent": "#a855f7",
-      "glowColor": "rgba(168, 85, 247, 0.15)",
-      "iconBg": "rgba(168, 85, 247, 0.1)",
-      "iconBorder": "rgba(168, 85, 247, 0.2)",
-      "iconType": "web",
-      "name": "VR BoxSlayer",
-      "url": "https://github.com/Pablo-Guill-Montero/UE-BOXSLAYER",
-      "description": "Experiencia inmersiva de realidad virtual desarrollada en Unreal Engine 5 e inspirada en las mecánicas rítmicas de Beat Saber. Un despliegue técnico e individual donde asumí el rol completo de programador, modelador y compositor.",
-      "features": [
-        "Programación de toda la lógica de juego mediante Blueprints",
-        "Modelado 3D completo de todos los assets y composición del escenario",
-        "Composición musical original y diseño de sonido espacializado"
-      ],
-      "ctaText": "Ver Código en GitHub"
-    },
-    {
-      "badge": "Ganador de Premios · Team Empanadilla",
+      "badge": "Estudio Indie / Jams",
       "badgeColor": "#ff4f5e",
       "cardAccent": "#ff4f5e",
       "glowColor": "rgba(255, 79, 94, 0.15)",
       "iconBg": "rgba(255, 79, 94, 0.1)",
       "iconBorder": "rgba(255, 79, 94, 0.2)",
-      "iconType": "server",
-      "name": "Dino bonker",
-      "url": "https://teamempanadilla.itch.io/dinobonker",
-      "description": "Videojuego retro tipo Donkey Kong desarrollado íntegramente en ensamblador para la Game Boy original durante un reto de desarrollo de un mes. Un auténtico tour de force de optimización de hardware clásico.",
+      "iconType": "gamepad",
+      "name": "Team Empanadilla",
+      "url": "https://teamempanadilla.itch.io/",
+      "description": "Sello de desarrollo colaborativo bajo el cual participo en Game Jams y proyectos conjuntos con otros desarrolladores. Centraliza nuestros lanzamientos jugables en Itch.io.",
       "features": [
-        "Desarrollo de físicas de juego, sistema de colisiones y mecánicas de lianas",
-        "Diseño de niveles (Level Design) y creación de parte del arte 2D",
-        "Composición e integración de la banda sonora con limitaciones de hardware"
+        "Prototipado rápido y juego en equipo",
+        "Control de versiones y publicación ágil",
+        "Portafolio de proyectos jugables en navegador"
       ],
-      "ctaText": "Jugar en Itch.io"
+      "ctaText": "Visitar Hub en Itch.io"
     }
   ]
 }

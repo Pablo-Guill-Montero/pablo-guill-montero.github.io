@@ -1,0 +1,49 @@
+{
+  "title": "Music",
+  "subtitle": "Original compositions, game soundtracks and audio experiments.",
+  "soundcloudProfile": "https://soundcloud.com/pablofiestas",
+  "tracks": [
+    {
+      "title": "Keep Going",
+      "category": "Videogame Music",
+      "year": "2025",
+      "cover": "/images/music/keepgoing.jpg",
+      "soundcloudUrl": "https://soundcloud.com/pablofiestas/keep-going"
+    },
+    {
+      "title": "WaveAdventure",
+      "category": "Soundtrack",
+      "year": "2025",
+      "cover": "/images/music/waveadventure.jpg",
+      "soundcloudUrl": "https://soundcloud.com/pablofiestas/waveadventure"
+    },
+    {
+      "title": "HangUp",
+      "category": "Trap",
+      "year": "2025",
+      "cover": "/images/music/hangup.jpg",
+      "soundcloudUrl": "https://soundcloud.com/pablofiestas/hangup"
+    },
+    {
+      "title": "Mi Musa",
+      "category": "Indie",
+      "year": "2024",
+      "cover": "/images/music/mimusa.jpg",
+      "soundcloudUrl": "https://soundcloud.com/pablofiestas/mi-musa"
+    },
+    {
+      "title": "Dino Bonker",
+      "category": "Game Audio",
+      "year": "2024",
+      "cover": "/images/music/dinobonker.jpg",
+      "soundcloudUrl": "https://soundcloud.com/pablofiestas/dino-bonker"
+    },
+    {
+      "title": "Last Hopes",
+      "category": "Game Soundtrack",
+      "year": "2024",
+      "cover": "/images/music/lasthopes.jpg",
+      "soundcloudUrl": "https://soundcloud.com/pablofiestas/last-hopes"
+    }
+  ]
+}

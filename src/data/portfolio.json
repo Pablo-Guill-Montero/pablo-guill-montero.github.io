@@ -1,34 +1,93 @@
 [
   {
-    "title": "Brand Identity & Visual System",
-    "category": "Branding",
-    "description": "A complete brand overhaul for a growing company — logo, typography, color system, and a style guide built to scale. Designed for flexibility without sacrificing cohesion.",
+    "title": "Perpetua Tenebrae - Combat Systems & Game Design",
+    "category": "Game Design",
+    "description": "Prácticas profesionales en White Crow Entertainment participando en el diseño de sistemas para 'Perpetua Tenebrae', un Action RPG de fantasía oscura. Mi trabajo se centró en la investigación de referentes AAA, la definición de pilares de diseño y la creación de propuestas mecánicas destinadas a aportar identidad propia al combate del proyecto. Desarrollé documentación de diseño completa para facilitar la comunicación entre departamentos y acelerar la toma de decisiones dentro del equipo. Entre las propuestas destacan el Sistema de Maldiciones, los estados de Oscuridad Perpetua y Luz Efímera, sistemas de riesgo-recompensa, progresión de armas y variantes de combate orientadas a fomentar la agresividad, la estrategia y la personalización del jugador. Todas las mecánicas fueron acompañadas de análisis de balance, limitaciones, riesgos de diseño e iteraciones basadas en feedback profesional.",
     "images": [
-      "/images/portfolio/project-1a.jpg",
-      "/images/portfolio/project-1b.jpg",
-      "/images/portfolio/project-1c.jpg"
+      "/images/portfolio/combat-1.jpg",
+      "/images/portfolio/combat-2.jpg",
+      "/images/portfolio/combat-3.jpg"
     ],
-    "slides": ["Brand Overview", "Style Guide Spread", "Product Shot"]
+    "slides": [
+      "Sistema de Maldiciones",
+      "Oscuridad Perpetua y Luz Efímera",
+      "Iteración y Balance"
+    ]
   },
   {
-    "title": "Interactive Web Experience",
-    "category": "Web Design",
-    "description": "A custom-built site blending editorial layout with smooth scroll interactions and motion. Designed in Figma, built in code, and optimized down to the frame.",
+    "title": "Perpetua Tenebrae - Design Documentation & Pitching",
+    "category": "Game Design Documentation",
+    "description": "Creación de documentación profesional para comunicar sistemas complejos de forma visual y accesible al resto del equipo. Elaboré documentos de diseño, presentaciones, diagramas de flujo, tablas de atributos y propuestas mecánicas que permitían analizar ventajas, problemas potenciales y alternativas antes de su implementación. El objetivo era transformar ideas abstractas en materiales claros y accionables para diseñadores, programadores y responsables de proyecto. Esta experiencia reforzó mi capacidad para comunicar diseño, iterar propuestas y defender soluciones fundamentadas mediante análisis de referentes, benchmarking y metodologías propias de producción.",
     "images": [
-      "/images/portfolio/project-2a.jpg",
-      "/images/portfolio/project-2b.jpg",
-      "/images/portfolio/project-2c.jpg"
+      "/images/portfolio/documentation-1.jpg",
+      "/images/portfolio/documentation-2.jpg",
+      "/images/portfolio/documentation-3.jpg"
     ],
-    "slides": ["Homepage Figma Design", "Homepage Complete", "Second Phase app page"]
+    "slides": [
+      "Presentaciones de Sistemas",
+      "Diagramas y Reglas de Diseño",
+      "Comunicación para Equipos"
+    ]
   },
   {
-    "title": "Short Film & Motion Piece",
-    "category": "Video",
-    "description": "A two-minute visual essay combining original footage, 3D elements, and motion design. Shot, edited, and scored independently — start to finish in three weeks.",
+    "title": "P_SoulsLike - Level Design Document",
+    "category": "Level Design",
+    "description": "Documento de Diseño de Nivel (LDD) completo detallando topologías, diseño de rutas de jugador y diagramas de flujo. Incluye un gráfico de intensidad para gestionar el ritmo del nivel y la experiencia del usuario.",
     "images": [
-      "/images/portfolio/project-3a.jpg",
-      "/images/portfolio/project-3b.jpg"
+      "/images/portfolio/psoulslike-1.jpg",
+      "/images/portfolio/psoulslike-2.jpg",
+      "/images/portfolio/psoulslike-3.jpg"
     ],
-    "slides": ["Opening Scene", "Modeling Sequence", "Developing Music for Documentary"]
+    "slides": [
+      "Topologías y Rutas",
+      "Diagramas de Flujo",
+      "Gráfico de Intensidad"
+    ]
+  },
+  {
+    "title": "Balls On Fire! - Pitch & Game Design",
+    "category": "Game Design",
+    "description": "One Pager comercial e iterativo para un juego de carreras de juguete. Sintetiza las mecánicas principales (core loop), define el público objetivo y establece un análisis directo de competidores.",
+    "images": [
+      "/images/portfolio/ballsonfire-1.jpg",
+      "/images/portfolio/ballsonfire-2.jpg",
+      "/images/portfolio/ballsonfire-3.jpg"
+    ],
+    "slides": [
+      "Core Mechanics",
+      "Target Audience",
+      "Análisis de Competidores"
+    ]
+  },
+  {
+    "title": "Castillo de Elda - Reconstrucción Histórica Interactiva",
+    "category": "Unity Development & 3D Art",
+    "description": "Proyecto desarrollado durante mis prácticas en empresa en 3DSoulSchool junto a otros dos compañeros. El objetivo consistió en recrear digitalmente el Castillo de Elda durante la Edad Media mediante un entorno 3D interactivo integrado en Unity. Participé en tareas de modelado, texturizado e integración de elementos arquitectónicos, así como en la implementación técnica dentro del motor. Entre mis responsabilidades destacaron la creación e integración de assets, configuración de colisiones, optimización de la escena, sistemas de iluminación y programación de NPCs con recorridos mediante waypoints. También implementé animaciones, controladores de estados y comportamientos básicos para poblar el entorno y mejorar la inmersión del visitante.",
+    "images": [
+      "/images/portfolio/castillo-1.jpg",
+      "/images/portfolio/castillo-2.jpg",
+      "/images/portfolio/castillo-3.jpg"
+    ],
+    "slides": [
+      "Modelado e Integración",
+      "NPCs y Animaciones",
+      "Entorno Interactivo en Unity"
+    ]
+  },
+    {
+    "title": "Perpetua Tenebrae - Level Design & Gameplay Spaces",
+    "category": "Level Design",
+    "description": "Diseño de espacios de juego y arenas de combate como apoyo al desarrollo de sistemas principales. Investigación de métricas AAA, análisis de referentes como God of War Ragnarök y creación de layouts orientados al ritmo de juego, exploración y combate. El proceso incluyó bocetos, documentación de flujo del jugador, blockouts en Unreal Engine y validación de propuestas mediante prototipos. Aunque el enfoque principal de las prácticas estuvo en Game Design, este trabajo permitió trasladar las mecánicas diseñadas a espacios jugables y comprender mejor la relación entre sistemas y entorno.",
+    "images": [
+      "/images/portfolio/arena-1.jpg",
+      "/images/portfolio/arena-2.jpg",
+      "/images/portfolio/arena-3.jpg"
+    ],
+    "slides": [
+      "Investigación y Métricas",
+      "Layouts y Blockouts",
+      "Gameplay Spaces"
+    ]
   }
+
 ]

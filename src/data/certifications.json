@@ -1,47 +1,38 @@
 [
   {
-    "name": "Google UX Design Certificate",
-    "issuer": "Google / Coursera",
-    "date": "May 2026",
-    "status": "Earned",
-    "type": "certification",
-    "description": "Seven-course program covering UX research, wireframing, prototyping, and usability testing. Emphasis on human-centered design principles and building accessible, inclusive user experiences.",
-    "credentialUrl": ""
-  },
-  {
-    "name": "Freelance Business Foundations",
-    "issuer": "CreativeLive",
-    "date": "December 2025",
-    "status": "Earned",
-    "type": "certification",
-    "description": "Business-side program covering client acquisition, proposal writing, contracts, pricing strategy, and scope management. A practical toolkit for running an independent creative practice.",
-    "credentialUrl": ""
-  },
-  {
-    "name": "Motion Design with After Effects",
-    "issuer": "School of Motion",
-    "date": "August 2024",
+    "name": "Grado en Ingeniería Multimedia",
+    "issuer": "Universidad de Alicante",
+    "date": "2025",
     "status": "Completed",
-    "type": "professional-development",
-    "description": "Motion principles, keyframe animation, easing curves, and compositing applied to title sequences, UI animations, and explainer video production.",
+    "type": "degree",
+    "description": "Formación multidisciplinar centrada en programación, desarrollo de videojuegos, diseño interactivo, gráficos por ordenador, inteligencia artificial y tecnologías multimedia.",
     "credentialUrl": ""
   },
   {
-    "name": "3D Art for Real-Time Engines",
-    "issuer": "Unity Learn / Epic Games",
-    "date": "Target: Q3 2027",
-    "status": "In Progress",
-    "type": "in-progress",
-    "description": "Bridging offline rendering knowledge with real-time constraints — optimizing assets, baking maps, and building environments in Unreal Engine for interactive and immersive projects.",
+    "name": "Game Design & Systems Design Internship",
+    "issuer": "White Crow Entertainment",
+    "date": "2025",
+    "status": "Completed",
+    "type": "professional-experience",
+    "description": "Prácticas profesionales participando en el diseño de sistemas, mecánicas de combate, documentación de diseño y propuestas de gameplay para el proyecto Perpetua Tenebrae.",
     "credentialUrl": ""
   },
   {
-    "name": "Creative Coding & Generative AI",
-    "issuer": "Domestika / Runway",
-    "date": "Target: 2028",
-    "status": "In Progress",
-    "type": "in-progress",
-    "description": "Exploring the intersection of code, generative models, and visual art — building interactive installations, AI-assisted design tools, and procedural media for web and physical spaces.",
+    "name": "Unity Development & 3D Production Internship",
+    "issuer": "3DSoulSchool",
+    "date": "2024",
+    "status": "Completed",
+    "type": "professional-experience",
+    "description": "Prácticas profesionales centradas en modelado 3D, integración en Unity, programación de NPCs, animaciones y reconstrucción histórica interactiva del Castillo de Elda.",
+    "credentialUrl": ""
+  },
+  {
+    "name": "Wwise vs FMOD: Comparative Study and Integration",
+    "issuer": "Universidad de Alicante",
+    "date": "2025",
+    "status": "Completed",
+    "type": "research-project",
+    "description": "Trabajo Fin de Grado dedicado a la investigación, comparación e integración de los middleware Wwise y FMOD en un motor propio desarrollado en C++.",
     "credentialUrl": ""
   }
 ]

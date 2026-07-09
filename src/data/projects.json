@@ -2,86 +2,173 @@
   "layout": "grid",
   "items": [
     {
-      "title": "Open Source Portfolio Template",
+      "title": "God Of Red",
       "featured": true,
       "resume": true,
-      "company": "Community",
-      "category": "webdev",
-      "description": "The template you're looking at right now. Built with Astro, fully data-driven, and designed to be claimed by anyone. Fork it, fill it, ship it. All placeholder content is waiting for yours.",
-      "tags": ["Astro", "TypeScript", "Tailwind CSS", "Open Source", "Template"],
-      "icon": "command-line",
-      "sliderImage": "/images/projects/use-astro2.jpg",
-      "sliderOrder": 1,
-      "backgroundImage": "/images/projects/use-astro3.jpg",
-      "images": [
-        "/images/projects/use-astro1.jpg",
-        "/images/projects/use-astro2.jpg",
-        "/images/projects/use-astro3.jpg"
+      "company": "Team Empanadilla",
+      "category": "gamedev",
+      "description": "Action RPG inspirado en The Legend of Zelda desarrollado sobre un motor propio en C++. Mi principal responsabilidad fue el desarrollo del sistema de IA basado en Behavior Trees, creando la arquitectura base, nodos reutilizables y comportamientos derivados para enemigos y NPCs. A partir de esta infraestructura participé en el diseño e implementación de comportamientos complejos mediante Blackboards, Steerings y sistemas de toma de decisiones. Paralelamente asumí gran parte del diseño sonoro del proyecto, creando efectos, ambientes y música interactiva mediante FMOD, además de desarrollar una fachada propia de integración que permitía comunicar el middleware con el motor del juego.",
+      "tags": [
+        "C++",
+        "Motor Propio",
+        "Behavior Trees",
+        "AI Programming",
+        "Blackboards",
+        "Steering Behaviors",
+        "Game AI",
+        "FMOD",
+        "Sound Design",
+        "Audio Integration"
       ],
-      "link": "",
-      "colorIcon": "devicon:astro",
-      "githubRepo": "portfolio-template"
-    },
-    {
-      "title": "3D Environment Study",
-      "featured": true,
-      "resume": true,
-      "company": "Personal Work",
-      "category": "blender",
-      "description": "A series of Blender scenes exploring lighting, texture, and atmosphere — no narrative, just craft. Rendered in Cycles, post-processed in Photoshop, shared as a study in patience and iteration.",
-      "tags": ["Blender", "3D Modeling", "Lighting", "Cycles Render", "Photoshop"],
       "icon": "cpu-chip",
-      "sliderImage": "/images/projects/blender-mockup2.jpg",
-      "sliderOrder": 2,
-      "backgroundImage": "/images/projects/blender-mockup1.jpg",
+      "sliderImage": "/images/projects/godofred_slider.jpg",
+      "sliderOrder": 1,
+      "backgroundImage": "/images/projects/godofred_bg.jpg",
       "images": [
-        "/images/projects/blender-mockup1.jpg",
-        "/images/projects/blender-mockup2.jpg",
-        "/images/projects/blender-mockup3.jpg"
+        "/images/projects/godofred_1.jpg",
+        "/images/projects/godofred_2.jpg"
       ],
-      "link": "",
-      "colorIcon": "devicon:blender",
+      "link": "https://teamempanadilla.itch.io/god-of-red",
+      "colorIcon": "mdi:brain",
       "githubRepo": ""
     },
     {
-      "title": "Personal Design System",
+      "title": "Wwise vs FMOD - Audio Middleware Research & Integration",
       "featured": true,
-      "company": "Side Project",
-      "category": "design",
-      "description": "A living component library built for personal and freelance use. Design tokens, reusable components, and documentation that travel from project to project — no starting from scratch every time.",
-      "tags": ["Figma", "CSS", "TypeScript", "Design Systems", "Component Library"],
-      "icon": "document-text",
-      "sliderImage": "/images/projects/design-library3.jpg",
-      "sliderOrder": 4,
-      "backgroundImage": "/images/projects/design-library2.jpg",
-      "images": [
-        "/images/projects/design-library1.jpg",
-        "/images/projects/design-library2.jpg",
-        "/images/projects/design-library3.jpg"
+      "resume": true,
+      "company": "Universidad de Alicante",
+      "category": "audio",
+      "description": "Trabajo Fin de Grado centrado en la investigación, comparación e integración de los middleware de audio Wwise y FMOD dentro de un motor de videojuegos propio desarrollado en C++. El proyecto incluyó un análisis exhaustivo de ambas herramientas, evaluando flujos de trabajo, sistemas de eventos, parámetros, mezcla, optimización, música interactiva y capacidades de integración profesional. Como caso práctico diseñé e implementé exactamente el mismo sistema de audio para el videojuego God Of Red utilizando ambos middleware. Uno de los mayores retos técnicos consistió en integrar Wwise en una arquitectura originalmente desarrollada para Linux, obligando a adaptar el entorno de desarrollo, compilar librerías manualmente y construir una fachada de abstracción que permitiera intercambiar FMOD y Wwise sin modificar la lógica del juego. El resultado fue una comparativa técnica completa acompañada de una implementación funcional de ambos sistemas dentro de un mismo proyecto.",
+      "tags": [
+        "Wwise",
+        "FMOD",
+        "Audio Programming",
+        "Sound Design",
+        "Research",
+        "C++",
+        "Middleware",
+        "Interactive Audio",
+        "Game Audio",
+        "Technical Audio"
       ],
-      "link": "",
-      "colorIcon": "devicon:figma",
-      "githubRepo": "design-system"
+      "icon": "speaker-wave",
+      "sliderImage": "/images/projects/wwisefmod_slider.jpg",
+      "sliderOrder": 0,
+      "backgroundImage": "/images/projects/wwisefmod_bg.jpg",
+      "images": [
+        "/images/projects/wwisefmod_1.jpg",
+        "/images/projects/wwisefmod_2.jpg"
+      ],
+      "link": "#",
+      "colorIcon": "mdi:music-circle",
+      "githubRepo": ""
     },
     {
-      "title": "Photography Workflow App",
+      "title": "Dino bonker",
+      "featured": true,
       "resume": true,
-      "company": "Side Project",
-      "category": "appdev",
-      "description": "A lightweight local web app for managing shoot intake, selects, and client delivery — replacing a patchwork of folders, spreadsheets, and emails with a single tool built for the way I work.",
-      "tags": ["React", "SQLite", "Photography", "Workflow", "Node.js"],
-      "icon": "eye",
-      "sliderImage": "/images/projects/web-app2.jpg",
-      "sliderOrder": 3,
-      "backgroundImage": "/images/projects/web-app3.jpg",
-      "images": [
-        "/images/projects/web-app1.jpg",
-        "/images/projects/web-app2.jpg",
-        "/images/projects/web-app3.jpg"
+      "company": "Team Empanadilla",
+      "category": "gamedev",
+      "description": "Videojuego arcade retro tipo Donkey Kong desarrollado en lenguaje Ensamblador para la Game Boy original durante un reto de un mes. Proyecto galardonado con múltiples premios donde resolví el sistema de colisiones, mecánicas de lianas, diseño de niveles e integración musical con limitaciones severas de hardware.",
+      "tags": [
+        "Assembly",
+        "Game Boy",
+        "Retro",
+        "Level Design",
+        "GBDK",
+        "Optimización"
       ],
-      "link": "",
-      "colorIcon": "devicon:react",
-      "githubRepo": "photo-workflow"
+      "icon": "command-line",
+      "sliderImage": "/images/projects/dinobonker_slider.jpg",
+      "sliderOrder": 5,
+      "backgroundImage": "/images/projects/dinobonker_bg.jpg",
+      "images": [
+        "/images/projects/dinobonker_1.jpg",
+        "/images/projects/dinobonker_2.jpg"
+      ],
+      "link": "https://teamempanadilla.itch.io/dinobonker",
+      "colorIcon": "mdi:gamepad-variant",
+      "githubRepo": ""
+    },
+    {
+      "title": "Night FM",
+      "featured": true,
+      "resume": true,
+      "company": "Trabajo Personal",
+      "category": "gamedev",
+      "description": "Prototipo de juego rítmico cerrado y funcional, orientado a la Generación X. Unió mis perfiles de programación y música mediante la integración de audio con FMOD en Unity y la programación en C# de interfaces de usuario diegéticas (estilo radio cassette).",
+      "tags": [
+        "Unity",
+        "C#",
+        "FMOD",
+        "Audio Integration",
+        "Rhythm Game",
+        "UI/UX"
+      ],
+      "icon": "musical-note",
+      "sliderImage": "/images/projects/nightfm_slider.jpg",
+      "sliderOrder": 2,
+      "backgroundImage": "/images/projects/nightfm_bg.jpg",
+      "images": [
+        "/images/projects/nightfm_1.jpg",
+        "/images/projects/nightfm_2.jpg"
+      ],
+      "link": "#",
+      "colorIcon": "simple-icons:unity",
+      "githubRepo": "Night-FM-Repo"
+    },
+    {
+      "title": "Magma Extractor",
+      "featured": true,
+      "resume": true,
+      "company": "Trabajo Personal",
+      "category": "gamedev",
+      "description": "Prototipo jugable tipo Megabonk desarrollado en Unreal Engine. Implementación completa de mecánicas mediante Blueprints, programación de IA para torretas usando Behavior Trees y configuración de animaciones (BlendSpaces, Montages).",
+      "tags": [
+        "Unreal Engine",
+        "Blueprints",
+        "Behavior Trees",
+        "IA",
+        "Prototipado"
+      ],
+      "icon": "fire",
+      "sliderImage": "/images/projects/magma_slider.jpg",
+      "sliderOrder": 3,
+      "backgroundImage": "/images/projects/magma_bg.jpg",
+      "images": [
+        "/images/projects/magma_1.jpg",
+        "/images/projects/magma_2.jpg"
+      ],
+      "link": "#",
+      "colorIcon": "simple-icons:unrealengine",
+      "githubRepo": "Magma-Extractor"
+    },
+    {
+      "title": "VR BoxSlayer",
+      "featured": true,
+      "resume": true,
+      "company": "Trabajo Personal",
+      "category": "gamedev",
+      "description": "Experiencia inmersiva rítmica para Oculus Quest 2 desarrollada en Unreal Engine 5. Un desarrollo íntegramente individual donde asumí la programación técnica de mecánicas mediante Blueprints, el modelado 3D de entornos y la composición de la banda sonora espacializada.",
+      "tags": [
+        "Unreal Engine 5",
+        "Oculus Quest 2",
+        "VR",
+        "Blueprints",
+        "Blender",
+        "Sound Design"
+      ],
+      "icon": "cpu-chip",
+      "sliderImage": "/images/projects/boxslayer_slider.jpg",
+      "sliderOrder": 4,
+      "backgroundImage": "/images/projects/boxslayer_bg.jpg",
+      "images": [
+        "/images/projects/boxslayer_1.jpg",
+        "/images/projects/boxslayer_2.jpg"
+      ],
+      "link": "https://github.com/Pablo-Guill-Montero/UE-BOXSLAYER",
+      "colorIcon": "simple-icons:unrealengine",
+      "githubRepo": "UE-BOXSLAYER"
     }
   ]
 }

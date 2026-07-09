@@ -1,28 +1,28 @@
 {
   "items": [
     {
-      "key": "sysadmin",
-      "icon": "server-stack",
-      "title": "Design & Art Direction",
-      "description": "Visual identity, layout, typography, and the aesthetic decisions that make people stop and look twice. Whether print or screen, the goal is the same — work that holds up."
+      "key": "gamedesign",
+      "icon": "puzzle-piece",
+      "title": "Game Design",
+      "description": "Diseño de mecánicas, sistemas de progresión, combate, economía y experiencia de jugador. Desarrollo de documentación profesional, análisis de referentes y propuestas orientadas a producción."
     },
     {
-      "key": "webdev",
-      "icon": "code-bracket-square",
-      "title": "Web Design & Development",
-      "description": "From wireframe to deployment — building sites and apps that look considered, perform well, and give visitors exactly what they came for."
+      "key": "technicaldesign",
+      "icon": "cpu-chip",
+      "title": "Technical Design",
+      "description": "Puente entre diseño y programación. Creación de herramientas, prototipos, sistemas de IA, Behavior Trees y arquitecturas que permiten transformar ideas de diseño en funcionalidades reales."
     },
     {
-      "key": "freelance",
-      "icon": "user-circle",
-      "title": "Creative Freelance",
-      "description": "Independent project work in photography, video, 3D, illustration, or wherever the brief leads. Direct to work with, flexible, and invested in the outcome."
+      "key": "gameplayprogramming",
+      "icon": "code-bracket",
+      "title": "Gameplay Programming",
+      "description": "Desarrollo de mecánicas, IA, sistemas interactivos y herramientas utilizando C++, C#, Unity, Unreal Engine y motores propios."
     },
     {
-      "key": "leadership",
-      "icon": "users",
-      "title": "Collaboration & Direction",
-      "description": "Working alongside teams, clients, and stakeholders to take a project from idea to shipped — clear communication, honest timelines, and work that actually gets done."
+      "key": "audiodesign",
+      "icon": "speaker-wave",
+      "title": "Audio Design & Middleware",
+      "description": "Diseño sonoro, integración de audio interactivo y desarrollo de sistemas con FMOD y Wwise. Experiencia en música adaptativa, RTPCs, eventos, mezcla dinámica y programación de audio."
     }
   ]
 }
