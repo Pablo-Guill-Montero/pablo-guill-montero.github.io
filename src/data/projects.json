@@ -26,11 +26,11 @@
       "backgroundImage": "/images/projects/godofred_bg.png",
       "images": [
         "/images/projects/godofred_1.png",
-        "/images/projects/godofred_2.jpg",
+        "/images/projects/godofred_2.png",
         "/images/projects/godofred_3.png",
-        "/images/projects/godofred_4.jpg",
+        "/images/projects/godofred_4.png",
         "/images/projects/godofred_5.png",
-        "/images/projects/godofred_6.jpg"
+        "/images/projects/godofred_6.png"
       ],
       "link": "https://teamempanadilla.itch.io/god-of-red",
       "colorIcon": "mdi:brain",
