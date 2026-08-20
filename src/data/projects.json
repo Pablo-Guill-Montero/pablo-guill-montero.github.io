@@ -21,12 +21,16 @@
         "Audio Integration"
       ],
       "icon": "cpu-chip",
-      "sliderImage": "/images/projects/godofred_slider.jpg",
+      "sliderImage": "/images/projects/godofred_slider.png",
       "sliderOrder": 1,
-      "backgroundImage": "/images/projects/godofred_bg.jpg",
+      "backgroundImage": "/images/projects/godofred_bg.png",
       "images": [
-        "/images/projects/godofred_1.jpg",
-        "/images/projects/godofred_2.jpg"
+        "/images/projects/godofred_1.png",
+        "/images/projects/godofred_2.jpg",
+        "/images/projects/godofred_3.png",
+        "/images/projects/godofred_4.jpg",
+        "/images/projects/godofred_5.png",
+        "/images/projects/godofred_6.jpg"
       ],
       "link": "https://teamempanadilla.itch.io/god-of-red",
       "colorIcon": "mdi:brain",
@@ -52,14 +56,14 @@
         "Technical Audio"
       ],
       "icon": "speaker-wave",
-      "sliderImage": "/images/projects/wwisefmod_slider.jpg",
+      "sliderImage": "/images/projects/tfg_slider.jpg",
       "sliderOrder": 0,
-      "backgroundImage": "/images/projects/wwisefmod_bg.jpg",
+      "backgroundImage": "/images/projects/tfg_sbg.jpg",
       "images": [
-        "/images/projects/wwisefmod_1.jpg",
-        "/images/projects/wwisefmod_2.jpg"
+        "/images/projects/tfg_1.png",
+        "/images/projects/tfg_2.png"
       ],
-      "link": "#",
+      "link": "https://youtu.be/lSz3p97EpOU",
       "colorIcon": "mdi:music-circle",
       "githubRepo": ""
     },
@@ -79,12 +83,15 @@
         "Optimización"
       ],
       "icon": "command-line",
-      "sliderImage": "/images/projects/dinobonker_slider.jpg",
+      "sliderImage": "/images/projects/dinobonker_slider.png",
       "sliderOrder": 5,
-      "backgroundImage": "/images/projects/dinobonker_bg.jpg",
+      "backgroundImage": "/images/projects/dinobonker_bg.png",
       "images": [
-        "/images/projects/dinobonker_1.jpg",
-        "/images/projects/dinobonker_2.jpg"
+        "/images/projects/dinobonker_1.png",
+        "/images/projects/dinobonker_2.png",
+        "/images/projects/dinobonker_3.png",
+        "/images/projects/dinobonker_4.png",
+        "/images/projects/dinobonker_5.png"
       ],
       "link": "https://teamempanadilla.itch.io/dinobonker",
       "colorIcon": "mdi:gamepad-variant",
@@ -106,12 +113,17 @@
         "UI/UX"
       ],
       "icon": "musical-note",
-      "sliderImage": "/images/projects/nightfm_slider.jpg",
+      "sliderImage": "/images/projects/nightfm_slider.png",
       "sliderOrder": 2,
-      "backgroundImage": "/images/projects/nightfm_bg.jpg",
+      "backgroundImage": "/images/projects/nightfm_bg.png",
       "images": [
-        "/images/projects/nightfm_1.jpg",
-        "/images/projects/nightfm_2.jpg"
+        "/images/projects/nightfm_1.png",
+        "/images/projects/nightfm_2.png",
+        "/images/projects/nightfm_3.png",
+        "/images/projects/nightfm_4.png",
+        "/images/projects/nightfm_5.png",
+        "/images/projects/nightfm_6.png",
+        "/images/projects/nightfm_7.png"
       ],
       "link": "#",
       "colorIcon": "simple-icons:unity",
@@ -132,12 +144,12 @@
         "Prototipado"
       ],
       "icon": "fire",
-      "sliderImage": "/images/projects/magma_slider.jpg",
+      "sliderImage": "/images/projects/magma_1.png",
       "sliderOrder": 3,
-      "backgroundImage": "/images/projects/magma_bg.jpg",
+      "backgroundImage": "/images/projects/magma_2.png",
       "images": [
-        "/images/projects/magma_1.jpg",
-        "/images/projects/magma_2.jpg"
+        "/images/projects/magma_1.png",
+        "/images/projects/magma_2.png"
       ],
       "link": "#",
       "colorIcon": "simple-icons:unrealengine",
@@ -159,12 +171,13 @@
         "Sound Design"
       ],
       "icon": "cpu-chip",
-      "sliderImage": "/images/projects/boxslayer_slider.jpg",
+      "sliderImage": "/images/projects/box_slayer_slider.png",
       "sliderOrder": 4,
-      "backgroundImage": "/images/projects/boxslayer_bg.jpg",
+      "backgroundImage": "/images/projects/box_slayer_bg.png",
       "images": [
-        "/images/projects/boxslayer_1.jpg",
-        "/images/projects/boxslayer_2.jpg"
+        "/images/projects/box_slayer_1.png",
+        "/images/projects/box_slayer_2.png",
+        "/images/projects/box_slayer_3.png"
       ],
       "link": "https://github.com/Pablo-Guill-Montero/UE-BOXSLAYER",
       "colorIcon": "simple-icons:unrealengine",

@@ -4,29 +4,13 @@
     "category": "Game Design",
     "description": "Prácticas profesionales en White Crow Entertainment participando en el diseño de sistemas para 'Perpetua Tenebrae', un Action RPG de fantasía oscura. Mi trabajo se centró en la investigación de referentes AAA, la definición de pilares de diseño y la creación de propuestas mecánicas destinadas a aportar identidad propia al combate del proyecto. Desarrollé documentación de diseño completa para facilitar la comunicación entre departamentos y acelerar la toma de decisiones dentro del equipo. Entre las propuestas destacan el Sistema de Maldiciones, los estados de Oscuridad Perpetua y Luz Efímera, sistemas de riesgo-recompensa, progresión de armas y variantes de combate orientadas a fomentar la agresividad, la estrategia y la personalización del jugador. Todas las mecánicas fueron acompañadas de análisis de balance, limitaciones, riesgos de diseño e iteraciones basadas en feedback profesional.",
     "images": [
-      "/images/portfolio/combat-1.jpg",
-      "/images/portfolio/combat-2.jpg",
-      "/images/portfolio/combat-3.jpg"
+      "/images/portfolio/perpetua_1.png",
+      "/images/portfolio/perpetua_2.png"
     ],
     "slides": [
       "Sistema de Maldiciones",
       "Oscuridad Perpetua y Luz Efímera",
       "Iteración y Balance"
-    ]
-  },
-  {
-    "title": "Perpetua Tenebrae - Design Documentation & Pitching",
-    "category": "Game Design Documentation",
-    "description": "Creación de documentación profesional para comunicar sistemas complejos de forma visual y accesible al resto del equipo. Elaboré documentos de diseño, presentaciones, diagramas de flujo, tablas de atributos y propuestas mecánicas que permitían analizar ventajas, problemas potenciales y alternativas antes de su implementación. El objetivo era transformar ideas abstractas en materiales claros y accionables para diseñadores, programadores y responsables de proyecto. Esta experiencia reforzó mi capacidad para comunicar diseño, iterar propuestas y defender soluciones fundamentadas mediante análisis de referentes, benchmarking y metodologías propias de producción.",
-    "images": [
-      "/images/portfolio/documentation-1.jpg",
-      "/images/portfolio/documentation-2.jpg",
-      "/images/portfolio/documentation-3.jpg"
-    ],
-    "slides": [
-      "Presentaciones de Sistemas",
-      "Diagramas y Reglas de Diseño",
-      "Comunicación para Equipos"
     ]
   },
   {
@@ -49,9 +33,7 @@
     "category": "Game Design",
     "description": "One Pager comercial e iterativo para un juego de carreras de juguete. Sintetiza las mecánicas principales (core loop), define el público objetivo y establece un análisis directo de competidores.",
     "images": [
-      "/images/portfolio/ballsonfire-1.jpg",
-      "/images/portfolio/ballsonfire-2.jpg",
-      "/images/portfolio/ballsonfire-3.jpg"
+      "/images/portfolio/ballsonfire-1.jpg"
     ],
     "slides": [
       "Core Mechanics",
