@@ -26,11 +26,13 @@ const filters = [
   ...categoryFilters,
 ];
 
+
 const projectsJson = JSON.stringify(
   allProjectsData.map((p) => ({
     ...p,
     sliderImage:   p.sliderImage   ? withBase(p.sliderImage)   : p.sliderImage,
     backgroundImage: p.backgroundImage ? withBase(p.backgroundImage) : p.backgroundImage,
+    images: p.images ? p.images.map(img => withBase(img)) : [],
   }))
 );
 ---
@@ -201,6 +203,9 @@ const projectsJson = JSON.stringify(
     <div class="modal-body">
       <p id="modal-description" class="modal-description"></p>
       <div id="modal-tags" class="modal-tags"></div>
+     
+      <!-- Contenedor para la galería de imágenes -->
+      <div id="modal-gallery" class="grid grid-cols-2 gap-2 mb-6"></div>
 
       <div class="modal-cta-wrap">
         <a id="modal-link" href="#" target="_blank" rel="noopener" class="modal-cta-link">
@@ -349,6 +354,21 @@ const projectsJson = JSON.stringify(
       modalLink.classList.add('hidden');
       modalNoLink.classList.remove('hidden');
     }
+
+    // --- NUEVO CÓDIGO PARA LAS IMÁGENES ---
+    const modalGallery = document.getElementById('modal-gallery');
+    modalGallery.innerHTML = ''; // Limpiar imágenes anteriores
+    
+    if (p.images && p.images.length > 0) {
+      p.images.forEach(imgUrl => {
+        const imgEl = document.createElement('img');
+        imgEl.src = imgUrl;
+        imgEl.className = 'w-full h-auto rounded-lg object-cover border border-slate-700/50';
+        // Puedes añadir un estilo fijo si quieres, ej: imgEl.style.height = '150px';
+        modalGallery.appendChild(imgEl);
+      });
+    }
+    // --------------------------------------
 
     // The `hidden` attribute (not a CSS class) is used here because the modal-backdrop rule
     // sets `display:none !important` on `[hidden]`, which gives correct AT (screen reader) semantics.
