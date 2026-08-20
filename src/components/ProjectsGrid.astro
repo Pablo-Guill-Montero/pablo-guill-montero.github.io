@@ -205,7 +205,26 @@ const projectsJson = JSON.stringify(
       <div id="modal-tags" class="modal-tags"></div>
      
       <!-- Contenedor para la galería de imágenes -->
-      <div id="modal-gallery" class="grid grid-cols-2 gap-2 mb-6"></div>
+      <div id="modal-gallery-container" class="hidden mb-6">
+        <div class="relative w-full rounded-lg overflow-hidden border border-slate-700/50 bg-black/20">
+          <img id="modal-current-img" src="" alt="" class="w-full h-auto max-h-[50vh] object-contain mx-auto transition-opacity duration-300" />
+          
+          <!-- Controles de navegación -->
+          <button id="modal-prev-btn" class="modal-gallery-nav left-2" aria-label="Previous image">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="w-5 h-5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"></path>
+            </svg>
+          </button>
+          <button id="modal-next-btn" class="modal-gallery-nav right-2" aria-label="Next image">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="w-5 h-5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
+            </svg>
+          </button>
+        </div>
+        
+        <!-- Indicadores (Puntitos) -->
+        <div id="modal-gallery-dots" class="flex justify-center items-center gap-2 mt-3"></div>
+      </div>
 
       <div class="modal-cta-wrap">
         <a id="modal-link" href="#" target="_blank" rel="noopener" class="modal-cta-link">
@@ -316,6 +335,64 @@ const projectsJson = JSON.stringify(
   const modalLinkTx = document.getElementById('modal-link-text');
   const modalNoLink = document.getElementById('modal-no-link');
 
+  const modalGalleryContainer = document.getElementById('modal-gallery-container');
+  const modalCurrentImg = document.getElementById('modal-current-img');
+  const modalPrevBtn = document.getElementById('modal-prev-btn');
+  const modalNextBtn = document.getElementById('modal-next-btn');
+  const modalGalleryDots = document.getElementById('modal-gallery-dots');
+
+  let currentProjectIdx = null;
+  let currentSlide = 0;
+
+  function renderSlide() {
+    const p = projects[currentProjectIdx];
+    
+    // Si no hay imágenes, ocultar galería
+    if (!p.images || p.images.length === 0) {
+      modalGalleryContainer.classList.add('hidden');
+      return;
+    }
+    
+    modalGalleryContainer.classList.remove('hidden');
+    modalCurrentImg.src = p.images[currentSlide];
+
+    // Actualizar los puntos
+    modalGalleryDots.innerHTML = '';
+    
+    // Solo mostrar flechas y puntos si hay más de 1 imagen
+    if (p.images.length > 1) {
+      modalPrevBtn.style.display = 'flex';
+      modalNextBtn.style.display = 'flex';
+      
+      p.images.forEach((_, i) => {
+        const dot = document.createElement('button');
+        dot.className = `gallery-dot ${i === currentSlide ? 'active' : ''}`;
+        dot.setAttribute('aria-label', `Ver imagen ${i + 1}`);
+        dot.addEventListener('click', () => {
+          currentSlide = i;
+          renderSlide();
+        });
+        modalGalleryDots.appendChild(dot);
+      });
+    } else {
+      modalPrevBtn.style.display = 'none';
+      modalNextBtn.style.display = 'none';
+    }
+  }
+
+  // Eventos para los botones Anterior/Siguiente
+  modalPrevBtn.addEventListener('click', () => {
+    const p = projects[currentProjectIdx];
+    currentSlide = (currentSlide - 1 + p.images.length) % p.images.length;
+    renderSlide();
+  });
+
+  modalNextBtn.addEventListener('click', () => {
+    const p = projects[currentProjectIdx];
+    currentSlide = (currentSlide + 1) % p.images.length;
+    renderSlide();
+  });
+
   function openModal(idx) {
     const p = projects[idx];
     if (!p) return;
@@ -355,19 +432,10 @@ const projectsJson = JSON.stringify(
       modalNoLink.classList.remove('hidden');
     }
 
-    // --- NUEVO CÓDIGO PARA LAS IMÁGENES ---
-    const modalGallery = document.getElementById('modal-gallery');
-    modalGallery.innerHTML = ''; // Limpiar imágenes anteriores
-    
-    if (p.images && p.images.length > 0) {
-      p.images.forEach(imgUrl => {
-        const imgEl = document.createElement('img');
-        imgEl.src = imgUrl;
-        imgEl.className = 'w-full h-auto rounded-lg object-cover border border-slate-700/50';
-        // Puedes añadir un estilo fijo si quieres, ej: imgEl.style.height = '150px';
-        modalGallery.appendChild(imgEl);
-      });
-    }
+  // --- NUEVO CÓDIGO DEL SLIDER DE IMÁGENES---
+    currentProjectIdx = idx;
+    currentSlide = 0;
+    renderSlide();
     // --------------------------------------
 
     // The `hidden` attribute (not a CSS class) is used here because the modal-backdrop rule
@@ -407,6 +475,18 @@ const projectsJson = JSON.stringify(
   });
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape' && !modal.hasAttribute('hidden')) closeModal();
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (!modal.hasAttribute('hidden')) {
+      if (e.key === 'Escape') closeModal();
+      if (e.key === 'ArrowLeft' && projects[currentProjectIdx]?.images.length > 1) {
+        modalPrevBtn.click();
+      }
+      if (e.key === 'ArrowRight' && projects[currentProjectIdx]?.images.length > 1) {
+        modalNextBtn.click();
+      }
+    }
   });
 </script>
 
